@@ -17,7 +17,7 @@ function main() {
 
   function searchParticipant() {
     var filteredParticipants = participants.filter(function (participant) {
-      return participant.name.toLowerCase().indexOf(filterInput.value.toLowerCase()) !== -1;
+      return participant.name.toLowerCase().indexOf(this.value.toLowerCase()) !== -1;
     });
     clearAllDOMParticipants();
     createDOMParticipantsList(filteredParticipants);
